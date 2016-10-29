@@ -12,7 +12,7 @@ int main() {
         {
             cout << line << '\n';
         }
-        TreeFile.close();
+        treeFile.close();
     }
 
     else cout << "Unable to open file";
@@ -41,9 +41,9 @@ int main() {
 
 
     string line2;
-    if (myfile2.is_open())
+    if (treeFilef.is_open())
     {
-        while ( getline (myfile, line2) )
+        while ( getline (treeFile, line2) )
         {
             cout << 'line 2: ' << line2 << '\n';
         }
