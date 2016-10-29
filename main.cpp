@@ -3,14 +3,14 @@
 
 int main() {
     Point D3;
-    ifstream treeFile;
+    fstream treeFile;
     string line;
     treeFile.open ("input.dat");
     if (treeFile.is_open())
     {
         while ( getline (treeFile,line) )
         {
-            cout << line << '\n';
+            treeFile >> line;
         }
         treeFile.close();
     }
@@ -19,7 +19,7 @@ int main() {
 
     cout << "Enter the value of object : " << endl;
     cin >> D3;
-    cout << "Third Point :" << D3 << endl;
+    treeFile << "Third Point :" << D3 << endl;
 
     ofstream treeFilef;
     treeFilef.open("input.dat");
