@@ -3,16 +3,16 @@
 
 int main() {
     Point D3;
-
+    ifstream treeFile;
     string line;
-    ifstream myfile ("input.dat");
-    if (myfile.is_open())
+    treeFile.open ("input.dat");
+    if (treeFile.is_open())
     {
-        while ( getline (myfile,line) )
+        while ( getline (treeFile,line) )
         {
             cout << line << '\n';
         }
-        myfile.close();
+        TreeFile.close();
     }
 
     else cout << "Unable to open file";
@@ -21,14 +21,14 @@ int main() {
     cin >> D3;
     cout << "Third Point :" << D3 << endl;
 
-
-    ofstream myfile2("input.dat");
-    if (!myfile2.is_open()) {
+    ofstream treeFilef;
+    treeFilef.open("input.dat");
+    if (!treeFilef.is_open()) {
         cerr << "couldn't open output.dat" << endl;
         return -1;
     }
-    myfile2 << D3;
-    cout << "myfile :" << D3 << endl;
+    treeFilef << D3;
+    cout << "treeFilef :" << D3 << endl;
 
 
 
