@@ -45,7 +45,7 @@ int main() {
     {
         while ( getline (treeFile, line2) )
         {
-            cout << 'line 2: ' << line2 << '\n';
+            cout << "line 2: " << line2 << '\n';
         }
         outfile.close();
     }
