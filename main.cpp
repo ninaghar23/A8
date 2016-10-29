@@ -3,7 +3,7 @@
 
 int main() {
     Point D3;
-    Point D1;
+
     string line;
     ifstream myfile ("input.dat");
     if (myfile.is_open())
@@ -21,6 +21,18 @@ int main() {
     cin >> D3;
     cout << "Third Point :" << D3 << endl;
 
+
+    ofstream myfile2("input.dat");
+    if (!myfile2.is_open()) {
+        cerr << "couldn't open output.dat" << endl;
+        return -1;
+    }
+    myfile2 << D3;
+    cout << "myfile :" << D3 << endl;
+
+
+
+
     ofstream outfile;
     outfile.open("output.dat", ios::out);
     outfile << D3;
@@ -29,14 +41,13 @@ int main() {
 
 
     string line2;
-    ifstream myfile2 ("output.dat");
-    if (myfile.is_open())
+    if (myfile2.is_open())
     {
-        while ( getline (myfile2,line2) )
+        while ( getline (myfile, line2) )
         {
-            cout << line2 << '\n';
+            cout << 'line 2: ' << line2 << '\n';
         }
-        myfile2.close();
+        outfile.close();
     }
 
 
